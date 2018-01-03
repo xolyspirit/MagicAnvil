@@ -110,6 +110,23 @@ public class Material {
         GOOD,
         IDEAL;
 
+        @Override
+        public String toString() {
+            String s = "";
+            switch (this) {
+
+                case BAD: s = "плохое";
+                    break;
+                case COMMON: s = "обычное";
+                    break;
+                case GOOD: s = "редкое";
+                    break;
+                case IDEAL: s = "идеальное!";
+                    break;
+            }
+            return s;
+        }
+
         public Byte getQualityDivider(){
             Byte b= 0;
             switch (this){
@@ -123,10 +140,12 @@ public class Material {
             }
             return b;
         }
+
     }
 
     /**список возможных статов.**/
     public enum Stats {
+        ARMOR,
         AGILITY,
         ENDURANCE,
         STRENGTH,
@@ -144,6 +163,8 @@ public class Material {
         public String addedStat(){
             String s = "";
             switch (this) {
+                case ARMOR: s = " к броне";
+                    break;
                 case AGILITY: s = " к ловкости";
                     break;
                 case ENDURANCE: s = " к выносливости";

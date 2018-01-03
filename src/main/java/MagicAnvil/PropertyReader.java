@@ -6,7 +6,6 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -23,8 +22,8 @@ public class PropertyReader {
         parser = new JsonParser();
 
         try {
-            Object materialsObject = parser.parse(new BufferedReader(new InputStreamReader(this.getClass().getClassLoader().getResourceAsStream("MagicAnvil/Materials.json"))));
-            Object decorationsObject = parser.parse(new BufferedReader(new InputStreamReader(this.getClass().getClassLoader().getResourceAsStream("MagicAnvil/Decorations.json"))));
+            Object materialsObject = parser.parse(new BufferedReader(new InputStreamReader(this.getClass().getClassLoader().getResourceAsStream("MagicAnvil/resources/Materials.json"))));
+            Object decorationsObject = parser.parse(new BufferedReader(new InputStreamReader(this.getClass().getClassLoader().getResourceAsStream("MagicAnvil/resources/Decorations.json"))));
             JsonObject temp = (JsonObject) materialsObject;
             JsonArray mobj = temp.getAsJsonArray("materials");
             temp = (JsonObject)decorationsObject;

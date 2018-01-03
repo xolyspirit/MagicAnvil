@@ -10,6 +10,12 @@ public class Decoration {
     /**материал использованный для украшения**/
     private Material material;
 
+    @Override
+    public String toString() {
+        return name;
+    }
+
+    //стандартные геттеры сеттеры
     public String getAddedToCraft() {
         return addedToCraft;
     }
@@ -40,10 +46,5 @@ public class Decoration {
 
     public void setEffect(Effect effect) {
         this.effect = effect;
-    }
-
-    @Override
-    public String toString() {
-        return name;
     }
 }

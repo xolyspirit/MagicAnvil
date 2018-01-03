@@ -77,11 +77,14 @@ public class OverviewController {
             decore.getSelectionModel().getSelectedItem()!= null){
 
             ItemCrafter crafter = ItemCrafter.getInstance();
-            result.setText(crafter.equipCraft(thingType.getSelectionModel().getSelectedItem(),
-                    mainMaterial.getSelectionModel().getSelectedItem(),
+            //Вызываем изготовитель предметов, передавая ему выбранные пользователем данные
+            //он возвращает нам изготовленный предмет.
+            AbstractItem item = crafter.equipCraft(thingType.getSelectionModel().getSelectedItem(),
+            mainMaterial.getSelectionModel().getSelectedItem(),
                     additionalMaterial.getSelectionModel().getSelectedItem(),
-                    decore.getSelectionModel().getSelectedItem()));
-
+                    decore.getSelectionModel().getSelectedItem());
+            //Показываем описание созданного предмета
+            result.setText(item.getDescription());
         }
         else result.setText("Сначала нужно выбрать материалы!");
     }
