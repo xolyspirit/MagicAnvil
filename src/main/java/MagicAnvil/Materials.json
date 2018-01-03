@@ -1,0 +1,85 @@
+{"materials":[{
+  "materialName": "Шкура огненного ящера",
+  "craftedOfName": " из шкуры огненного ящера",
+  "addedToCraftName": " шкуры огненного ящера",
+  "quality": "COMMON",
+  "qualityMultiplicator": "3.0",
+
+  "elements":
+  {
+    "FIRE": "20",
+    "EARTH": "10"
+  },
+
+  "effects":
+  [
+    {
+      "effectName": "Воспламенение",
+      "effectDescription": "При получении урона, дает шанс поджечь атакующего противника",
+      "chance": "10",
+      "effectType": "DEFENSE",
+      "element": "FIRE"
+    }
+  ],
+
+  "stat": "AGILITY",
+  "color": "FIRE_ORANGE",
+  "materialType": "LEATHER"
+
+},
+{
+  "materialName": "Кожа темной рыбы",
+  "craftedOfName": " из кожи темной рыбы",
+  "addedToCraftName": " кожи темной рыбы",
+  "quality": "COMMON",
+  "qualityMultiplicator": "2.0",
+
+  "elements":
+  {
+    "WATER": "20",
+    "DARK": "10"
+  },
+
+  "effects":
+  [
+    {
+      "effectName": "Темная вода",
+      "effectDescription": "При получении урона, дает шанс замедлить скорость атаки атакующего противника на 15%",
+      "chance": "10",
+      "effectType": "DEFENSE",
+      "element": "WATER"
+    }
+  ],
+  "stat": "ENDURANCE",
+  "color": "WATER_BLUE",
+  "materialType": "LEATHER"
+},
+{
+    "materialName": "Кровь тролля",
+    "craftedOfName": " кровью тролля",
+    "addedToCraftName": " из крови темного тролля",
+    "quality": "COMMON",
+    "qualityMultiplicator": "2.5",
+
+    "elements":
+    {
+      "BLOOD": "20",
+      "DARK": "10",
+      "FIRE": "5"
+    },
+
+    "effects":
+    [
+      {
+        "effectName": "Ядовитая кровь",
+        "effectDescription": "При атаке есть шанс отравить противника. 10 урона каждые 5 секунд, в течении 100 секунд",
+        "chance": "10",
+        "effectType": "ATTACK",
+        "element": "BLOOD"
+      }
+    ],
+    "stat": "ACCURACY",
+    "color": "BLOOD_RED",
+    "materialType": "LIQUID"
+}]
+}

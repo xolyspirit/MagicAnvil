@@ -1,0 +1,14 @@
+{
+  "decorations": [{
+      "name": "Знак огня",
+      "addedToCraft": " со знаком огня",
+      "material":"Кровь тролля",
+      "effect":{
+        "effectName": "Знак огня",
+        "effectDescription": "",
+        "chance": "10",
+        "effectType": "ATTACK",
+        "element": "FIRE"
+      }
+    }]
+}

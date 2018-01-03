@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Materials>
+    <FireLizardSkin>
+        <Elements>
+            <FIRE>20</FIRE>
+            <EARTH>10</EARTH>
+        </Elements>
+        <QualityMultiplicator> 3.0</QualityMultiplicator>
+        <Effects>
+            <Effect>
+                <Index>1</Index>
+                <Chance>15</Chance>
+            </Effect>
+        </Effects>
+        <Stat>AGILITY</Stat>
+        <Color>FIRE_ORANGE</Color>
+    </FireLizardSkin>
+
+    <GloomyFishSkin>
+        <Elements>
+            <WATER>20</WATER>
+            <DARK>10</DARK>
+        </Elements>
+        <QualityMultiplicator> 2.0</QualityMultiplicator>
+        <Effects>
+            <Effect>
+                <Index>2</Index>
+                <Chance>10</Chance>
+            </Effect>
+        </Effects>
+        <Stat>ACCURACY</Stat>
+        <Color>WATER_BLUE</Color>
+    </GloomyFishSkin>
+
+    <TrollBlood>
+        <Elements>
+            <BLOOD>20</BLOOD>
+            <DARK>10</DARK>
+            <FIRE>5</FIRE>
+        </Elements>
+        <QualityMultiplicator> 2.5</QualityMultiplicator>
+        <Effects>
+            <Effect>
+                <Index>3</Index>
+                <Chance>10</Chance>
+            </Effect>
+        </Effects>
+        <Stat>STRENGTH</Stat>
+        <Color>BLOOD_RED</Color>
+    </TrollBlood>
+</Materials>
