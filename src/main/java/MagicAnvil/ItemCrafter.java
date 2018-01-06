@@ -115,6 +115,7 @@ public class ItemCrafter {
             //заносим данные о броне в подготовленную мапу
             stats.put(Material.Stats.ARMOR,temp);
 
+            //считаем статы
             for (Material.Elements el:resultElements.keySet()) {
                resultElements.put(el,random(-scatter, scatter)+ resultElements.get(el));
                 //Нормализуем показатель телосложения, чтобы он не был чрезмерно большим
