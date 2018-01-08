@@ -1,4 +1,4 @@
-package MagicAnvil;
+package magicAnvil;
 /**Этот класс пригодится в будущем, пока недоработан**/
 public class ManufacturedItem {
     private Equipment.EquipTypes type;

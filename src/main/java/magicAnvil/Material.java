@@ -1,4 +1,4 @@
-package MagicAnvil;
+package magicAnvil;
 
 import java.util.ArrayList;
 import java.util.HashMap;

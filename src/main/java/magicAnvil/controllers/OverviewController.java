@@ -1,6 +1,6 @@
-package MagicAnvil.Controllers;
+package magicAnvil.controllers;
 
-import MagicAnvil.*;
+import magicAnvil.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -53,11 +53,8 @@ public class OverviewController {
         types.addAll(Equipment.EquipTypes.values());
         thingType.setItems(types);
 
-        ObservableList<Material> mainmat = FXCollections.observableArrayList();
-
-        mainmat.addAll(reader.getMaterials().values());
-        mainMaterial.setItems(mainmat);
-        additionalMaterial.setItems(mainmat);
+        mainMaterial.setItems(FXCollections.<Material>observableArrayList(reader.getMaterials().values()));
+        additionalMaterial.setItems(FXCollections.<Material>observableArrayList(reader.getMaterials().values()));
 
 
         ObservableList<Decoration> dec = FXCollections.observableArrayList();

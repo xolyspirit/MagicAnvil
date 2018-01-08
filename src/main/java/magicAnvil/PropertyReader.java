@@ -1,4 +1,4 @@
-package MagicAnvil;
+package magicAnvil;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
@@ -14,16 +14,18 @@ public class PropertyReader {
     private static PropertyReader ourInstance = new PropertyReader();
     private HashMap<String,Material> materials;
     private HashMap<String, Decoration> decorations;
-    private JsonParser parser;
 
     private PropertyReader(){
         materials = new HashMap<String, Material>();
         decorations = new HashMap<String, Decoration>();
-        parser = new JsonParser();
-
+        JsonParser parser = new JsonParser();
         try {
-            Object materialsObject = parser.parse(new BufferedReader(new InputStreamReader(this.getClass().getClassLoader().getResourceAsStream("MagicAnvil/resources/Materials.json"))));
-            Object decorationsObject = parser.parse(new BufferedReader(new InputStreamReader(this.getClass().getClassLoader().getResourceAsStream("MagicAnvil/resources/Decorations.json"))));
+            //при подключении json файла нужно обязательно указать кодировку!!! иначе буду кракозябры после сборки
+            InputStreamReader im = new InputStreamReader(this.getClass().getClassLoader().getResourceAsStream("magicAnvil/Materials.json"),"utf-8");
+            Object materialsObject = parser.parse(new BufferedReader(im));
+            InputStreamReader id = new InputStreamReader(this.getClass().getClassLoader().getResourceAsStream("magicAnvil/Decorations.json"),"utf-8");
+            Object decorationsObject = parser.parse(new BufferedReader(id));
+
             JsonObject temp = (JsonObject) materialsObject;
             JsonArray mobj = temp.getAsJsonArray("materials");
             temp = (JsonObject)decorationsObject;
@@ -120,16 +122,8 @@ public class PropertyReader {
         return materials;
     }
 
-    public void setMaterials(HashMap<String, Material> materials) {
-        this.materials = materials;
-    }
-
     public HashMap<String, Decoration> getDecorations() {
         return decorations;
-    }
-
-    public void setDecorations(HashMap<String, Decoration> decorations) {
-        this.decorations = decorations;
     }
 
     public static PropertyReader getInstance() {

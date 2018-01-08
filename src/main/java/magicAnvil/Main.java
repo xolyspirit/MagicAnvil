@@ -1,6 +1,6 @@
-package MagicAnvil;
+package magicAnvil;
 
-import MagicAnvil.Controllers.OverviewController;
+import magicAnvil.controllers.OverviewController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -21,9 +21,10 @@ public class Main extends Application {
     }
 
     public void initRootLayout(){
+        System.out.print(Main.class.getName());
         try{
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(Main.class.getResource("Controllers/MainForm.fxml"));
+            loader.setLocation(Main.class.getResource("controllers/MainForm.fxml"));
             AnchorPane rootLayout = loader.load();
             Scene scene = new Scene(rootLayout);
             primaryStage.setScene(scene);

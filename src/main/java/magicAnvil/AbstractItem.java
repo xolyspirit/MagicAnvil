@@ -1,4 +1,4 @@
-package MagicAnvil;
+package magicAnvil;
 /**Базовый класс для всех вещей**/
 public abstract class AbstractItem {
     //тип премета- мебель, доспех, оружие и тд...

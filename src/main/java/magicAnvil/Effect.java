@@ -1,4 +1,4 @@
-package MagicAnvil;
+package magicAnvil;
 
 public class Effect {
     /**Название эффекта**/
